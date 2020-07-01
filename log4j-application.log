@@ -1,0 +1,67 @@
+2020-07-01 20:27:41,653 DEBUG [main] Logs:16 - Log4j appender configuration is successful !!
+ 2020-07-01 20:27:41,657  INFO [main] Logs:26 - ******************************************************************************************************
+ 2020-07-01 20:27:41,658  INFO [main] Logs:27 - ***************************                                                  *************************
+ 2020-07-01 20:27:41,664  INFO [main] Logs:29 - +++++++++++++++++++++++++++  test_NewUserAccountThenProductSelectionThenAssertOnProductPlacement  ++++++++++++++++++++++++++
+ 2020-07-01 20:27:41,664  INFO [main] Logs:31 - ***************************                                                   *************************
+ 2020-07-01 20:27:41,668  INFO [main] Logs:32 - *******************************************************************************************************
+ 2020-07-01 20:27:43,823  INFO [main] Logs:51 - Clicked On SignIn Button
+ 2020-07-01 20:27:44,421  INFO [main] Logs:51 - Typed email in email-address text field
+ 2020-07-01 20:30:48,080 DEBUG [main] Logs:16 - Log4j appender configuration is successful !!
+ 2020-07-01 20:30:48,084  INFO [main] Logs:26 - ******************************************************************************************************
+ 2020-07-01 20:30:48,085  INFO [main] Logs:27 - ***************************                                                  *************************
+ 2020-07-01 20:30:48,096  INFO [main] Logs:29 - +++++++++++++++++++++++++++  test_NewUserAccountThenProductSelectionThenAssertOnProductPlacement  ++++++++++++++++++++++++++
+ 2020-07-01 20:30:48,097  INFO [main] Logs:31 - ***************************                                                   *************************
+ 2020-07-01 20:30:48,097  INFO [main] Logs:32 - *******************************************************************************************************
+ 2020-07-01 20:30:50,992  INFO [main] Logs:51 - Clicked On SignIn Button
+ 2020-07-01 20:30:52,144  INFO [main] Logs:51 - Typed email in email-address text field
+ 2020-07-01 20:32:32,422 DEBUG [main] Logs:16 - Log4j appender configuration is successful !!
+ 2020-07-01 20:32:32,425  INFO [main] Logs:26 - ******************************************************************************************************
+ 2020-07-01 20:32:32,426  INFO [main] Logs:27 - ***************************                                                  *************************
+ 2020-07-01 20:32:32,428  INFO [main] Logs:29 - +++++++++++++++++++++++++++  test_NewUserAccountThenProductSelectionThenAssertOnProductPlacement  ++++++++++++++++++++++++++
+ 2020-07-01 20:32:32,428  INFO [main] Logs:31 - ***************************                                                   *************************
+ 2020-07-01 20:32:32,429  INFO [main] Logs:32 - *******************************************************************************************************
+ 2020-07-01 20:32:34,646  INFO [main] Logs:51 - Clicked On SignIn Button
+ 2020-07-01 20:32:35,328  INFO [main] Logs:51 - Typed email in email-address text field
+ 2020-07-01 20:32:44,545  INFO [main] Logs:51 - Filled all information for user authentication
+ 2020-07-01 20:32:47,279  INFO [main] Logs:51 - Selected blouse product from women category
+ 2020-07-01 20:32:52,167  INFO [main] Logs:51 - Clicked on add to cart button and then clicked proceed to checkout
+ 2020-07-01 20:32:53,814  INFO [main] Logs:51 - Listing shopping cart summary and then clicked proceed to checkout
+ 2020-07-01 20:32:55,640  INFO [main] Logs:51 - Confirmed address for billing
+ 2020-07-01 20:32:57,491  INFO [main] Logs:51 - Confirmed shipping option and proceed to checkout
+ 2020-07-01 20:32:58,710  INFO [main] Logs:51 - Selected type of payment as Bank Wire
+ 2020-07-01 20:33:01,540  INFO [main] Logs:51 - Confirmed bank wire payment method
+ 2020-07-01 20:33:04,209  INFO [main] Logs:51 - Viewing order history to confirm product placement
+ 2020-07-01 20:36:32,773 DEBUG [main] Logs:16 - Log4j appender configuration is successful !!
+ 2020-07-01 20:36:32,778  INFO [main] Logs:26 - ******************************************************************************************************
+ 2020-07-01 20:36:32,779  INFO [main] Logs:27 - ***************************                                                  *************************
+ 2020-07-01 20:36:32,782  INFO [main] Logs:29 - +++++++++++++++++++++++++++  test_NewUserAccountThenProductSelectionThenAssertOnProductPlacement  ++++++++++++++++++++++++++
+ 2020-07-01 20:36:32,783  INFO [main] Logs:31 - ***************************                                                   *************************
+ 2020-07-01 20:36:32,783  INFO [main] Logs:32 - *******************************************************************************************************
+ 2020-07-01 20:36:35,600  INFO [main] Logs:51 - Clicked On SignIn Button
+ 2020-07-01 20:36:36,193  INFO [main] Logs:51 - Typed email in email-address text field
+ 2020-07-01 20:36:41,967  INFO [main] Logs:51 - Filled all information for user authentication
+ 2020-07-01 20:36:42,338  INFO [main] Logs:51 - Selected blouse product from women category
+ 2020-07-01 20:45:46,171 DEBUG [main] Logs:16 - Log4j appender configuration is successful !!
+ 2020-07-01 20:45:46,176  INFO [main] Logs:26 - ******************************************************************************************************
+ 2020-07-01 20:45:46,177  INFO [main] Logs:27 - ***************************                                                  *************************
+ 2020-07-01 20:45:46,179  INFO [main] Logs:29 - +++++++++++++++++++++++++++  test_NewUserAccountThenProductSelectionThenAssertOnProductPlacement  ++++++++++++++++++++++++++
+ 2020-07-01 20:45:46,179  INFO [main] Logs:31 - ***************************                                                   *************************
+ 2020-07-01 20:45:46,180  INFO [main] Logs:32 - *******************************************************************************************************
+ 2020-07-01 20:51:33,907 DEBUG [main] Logs:16 - Log4j appender configuration is successful !!
+ 2020-07-01 20:51:33,910  INFO [main] Logs:26 - ******************************************************************************************************
+ 2020-07-01 20:51:33,911  INFO [main] Logs:27 - ***************************                                                  *************************
+ 2020-07-01 20:51:33,916  INFO [main] Logs:29 - +++++++++++++++++++++++++++  test_NewUserAccountThenProductSelectionThenAssertOnProductPlacement  ++++++++++++++++++++++++++
+ 2020-07-01 20:51:33,917  INFO [main] Logs:31 - ***************************                                                   *************************
+ 2020-07-01 20:51:33,918  INFO [main] Logs:32 - *******************************************************************************************************
+ 2020-07-01 20:51:35,853  INFO [main] Logs:51 - Clicked On SignIn Button
+ 2020-07-01 20:51:36,563  INFO [main] Logs:51 - Typed email in email-address text field
+ 2020-07-01 20:51:45,148  INFO [main] Logs:51 - Filled all information for user authentication
+ 2020-07-01 20:51:48,109  INFO [main] Logs:51 - Selected blouse product from women category
+ 2020-07-01 20:51:51,291  INFO [main] Logs:51 - Clicked on add to cart button and then clicked proceed to checkout
+ 2020-07-01 20:51:52,913  INFO [main] Logs:51 - Listing shopping cart summary and then clicked proceed to checkout
+ 2020-07-01 20:51:54,042  INFO [main] Logs:51 - Confirmed address for billing
+ 2020-07-01 20:51:55,718  INFO [main] Logs:51 - Confirmed shipping option and proceed to checkout
+ 2020-07-01 20:51:56,748  INFO [main] Logs:51 - Selected type of payment as Bank Wire
+ 2020-07-01 20:51:58,793  INFO [main] Logs:51 - Confirmed bank wire payment method
+ 2020-07-01 20:52:01,662  INFO [main] Logs:51 - Viewing order history to confirm product placement
+ 

@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Scenario">
+    <test name="Assert On Product Selection">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="automationTest.TestScenarios"/>
+        </classes>
+    </test>
+</suite>
