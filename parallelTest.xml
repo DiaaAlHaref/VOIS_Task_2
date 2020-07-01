@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ParallelTesting" parallel="tests" thread-count="1">
+
+    <test name="TestWithChrome">
+        <parameter name="browserParallel" value="chrome"/>
+        <classes>
+            <class name="automationTest.TestScenarios"/>
+        </classes>
+    </test>
+    <test name="TestWithFirefox">
+        <parameter name="browserParallel" value="firefox"/>
+        <classes>
+            <class name="automationTest.TestScenarios"/>
+        </classes>
+    </test>
+    <test name="TestWithInternetExplorer">
+        <parameter name="browserParallel" value="internet explorer"/>
+        <classes>
+            <class name="automationTest.TestScenarios"/>
+        </classes>
+    </test>
+</suite>
