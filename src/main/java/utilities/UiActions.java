@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.print.attribute.standard.MultipleDocumentHandling;
 import java.util.List;
 
 public class UiActions {
@@ -142,35 +143,96 @@ public class UiActions {
         scroll.executeScript("window.scrollTo(0," + height + ");");
     }
 
+    /**
+     * Handle scroll Down action until element found
+     *
+     * @param locator represents the locator of the element to scroll until it found
+     */
     public void scrollTillElementFound(By locator) {
-        JavascriptExecutor scroll = (JavascriptExecutor) driver;
-        scroll.executeScript("arguments[0].scrollIntoView();", element.findElement(locator));
+        try {
+            JavascriptExecutor scroll = (JavascriptExecutor) driver;
+            scroll.executeScript("arguments[0].scrollIntoView();", element.findElement(locator));
+        } catch (NoSuchElementException e) {
+            HandleExceptions.NoSuchElementExceptionHandling(e);
+        } catch (ElementNotVisibleException e) {
+            HandleExceptions.ElementNotVisibleExceptionHandling(e);
+        }
+
     }
 
-
+    /**
+     * Method select from drop down menu using either index or value string
+     *
+     * @param type    represents type of selection
+     * @param locator represents locator of an element
+     * @param value   represents string selected from the dropDown menu
+     * @return object from type UiActions for concept of chaining
+     */
     public UiActions selectFromDropMenu(String type, By locator, String value) {
         Select element = new Select(driver.findElement(locator));
-        switch (type) {
-            case "selectByValue":
-                element.selectByValue(value);
-            case "selectByIndex":
-                element.selectByIndex(Integer.parseInt(value));
+        try {
+            switch (type) {
+                case "selectByValue":
+                    element.selectByValue(value);
+                case "selectByIndex":
+                    element.selectByIndex(Integer.parseInt(value));
+            }
+        } catch (InvalidSelectorException e) {
+            HandleExceptions.InvalidSelectorExceptionHandling(e);
+        } catch (NoSuchElementException e) {
+            HandleExceptions.NoSuchElementExceptionHandling(e);
+        } catch (ElementNotVisibleException e) {
+            HandleExceptions.ElementNotVisibleExceptionHandling(e);
+        } catch (ElementNotInteractableException e) {
+            HandleExceptions.ElementNotInteractableExceptionHandling(e);
+        } catch (NullPointerException e) {
+            HandleExceptions.NullPointerExceptionHandling(e);
         }
         return this;
     }
 
+    /**
+     * Method used to hover with mouse on element
+     *
+     * @param locator represents locator of an element
+     * @return object from type UiActions for concept of chaining
+     */
     public UiActions hoverOnElement(By locator) {
         Actions actions = new Actions(driver);
-        actions.moveToElement(driver.findElement(locator)).perform();
+        try {
+            actions.moveToElement(driver.findElement(locator)).perform();
+        } catch (InvalidSelectorException e) {
+            HandleExceptions.InvalidSelectorExceptionHandling(e);
+        } catch (NoSuchElementException e) {
+            HandleExceptions.NoSuchElementExceptionHandling(e);
+        } catch (ElementNotInteractableException e) {
+            HandleExceptions.ElementNotInteractableExceptionHandling(e);
+        }
         return this;
     }
 
+    /**
+     * Method interact with Bootstrap Modal Popup window and take action on elements
+     *
+     * @param modalLocator  represents locator of the window
+     * @param buttonLocator represents locator of the element placed inside the window to take action
+     * @return object from type UiActions for concept of chaining
+     */
     public UiActions switchToPopUpWindow(By modalLocator, By buttonLocator) {
-        WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(modalLocator));
-        modal.findElement(buttonLocator).click();
+        try{
+            WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(modalLocator));
+            modal.findElement(buttonLocator).click();
+        }catch (InvalidSelectorException e){
+            HandleExceptions.InvalidSelectorExceptionHandling(e);
+        }catch (NoSuchElementException e){
+            HandleExceptions.NoSuchElementExceptionHandling(e);
+        }catch (ElementNotVisibleException e){
+            HandleExceptions.ElementNotVisibleExceptionHandling(e);
+        }catch (ElementNotInteractableException e){
+            HandleExceptions.ElementNotInteractableExceptionHandling(e);
+        }
         return this;
     }
-
     /*public String getTextForAssertion(By locator) {
         element= driver.findElement(locator);
         return element.getText();
