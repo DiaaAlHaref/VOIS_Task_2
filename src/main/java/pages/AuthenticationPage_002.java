@@ -38,7 +38,7 @@ public class AuthenticationPage_002 {
     By myAddressAliasFieldLocator = By.id(locators[13]);
     By registerButtonLocator = By.id(locators[14]);
 
-    String[] keywords = PropertiesFile.propertiesFileReader(new String[]{"firstName", "lastName", "email",
+   /* String[] keywords = PropertiesFile.propertiesFileReader(new String[]{"firstName", "lastName", "email",
             "password", "address", "city", "postalCode", "mobilePhone", "addressAlias"});
     String firstName = keywords[0];
     String lastName = keywords[1];
@@ -48,12 +48,13 @@ public class AuthenticationPage_002 {
     String city = keywords[5];
     String postalCode = keywords[6];
     String mobilePhone = keywords[7];
-    String addressAlias = keywords[8];
+    String addressAlias = keywords[8];*/
 
     /**
      * Method filling the information with sendkeys option to all test fields in order
      */
-    public void authenticationPersonalInformation() {
+    public void authenticationPersonalInformation(String firstName, String lastName, String email, String password,
+                                                  String address, String city, String postalCode, String mobilePhone, String addressAlias) {
         uiActions.waitForElement(genderRadioButtonLocator, "clickable")
                 .findElementAndReturn(genderRadioButtonLocator)
                 .takeActionOnElement("click"); //gender radio button_01

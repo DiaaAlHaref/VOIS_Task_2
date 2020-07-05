@@ -142,6 +142,14 @@ public class UiActions {
         JavascriptExecutor scroll = (JavascriptExecutor) driver;
         scroll.executeScript("window.scrollTo(0," + height + ");");
     }
+    /**
+     *
+     */
+    public void scrollUp() {
+        JavascriptExecutor scroll = (JavascriptExecutor) driver;
+        scroll.executeScript("scroll(0, -300);");
+    }
+
 
     /**
      * Handle scroll Down action until element found

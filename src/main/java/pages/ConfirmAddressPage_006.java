@@ -20,8 +20,9 @@ public class ConfirmAddressPage_006 {
      * Method to scrollDown to proceedToCheckout Button and click on it
      */
     public void confirmAddressesForBilling() {
-        uiActions.scrollDownToBottom(700);
-        uiActions.findElementAndReturn(proceedToCheckOutButtonLocator)
+        uiActions.scrollDownToBottom(400);
+        uiActions.waitForElement(proceedToCheckOutButtonLocator, "clickable")
+                .findElementAndReturn(proceedToCheckOutButtonLocator)
                 .takeActionOnElement("click");
     }
 }

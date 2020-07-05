@@ -19,7 +19,7 @@ public class ShoppingCartPage_005 {
      * Method to scrollDown to proceedToCheckout Button and click on it
      */
     public void shoppingCartSummaryProceedToCheckOut() {
-        uiActions.scrollDownToBottom(700);
+        uiActions.scrollDownToBottom(400);
         uiActions.findElementAndReturn(proceedToCheckOutButtonLocator)
                 .takeActionOnElement("click");
     }

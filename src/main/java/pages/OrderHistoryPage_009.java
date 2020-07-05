@@ -14,12 +14,15 @@ import utilities.UiActions;
 public class OrderHistoryPage_009 {
     UiActions uiActions = new UiActions();
 
+    //String code;
+
     By myAccountNameLocator = By.cssSelector(".account");
 
     By orderHistoryAndDetailsButtonLocator = By.xpath("//a[@title='Orders']");
     By orderReferenceLocator = By.xpath("//p[@class='dark']/strong");
 
     By detailsButtonLocator = By.xpath("//span[contains(.,'Details')]");
+    //By orderNumberCodeLocator = By.xpath("//tr[@class='first_item ' and contains(.,'"+code+"')] ");
 
     /**
      * Method to check placement of the order checked
@@ -42,10 +45,15 @@ public class OrderHistoryPage_009 {
      * @return order number with the date of confirmation to assert on
      */
     public String validateOrderPlacementInOrderHistory() {
-        uiActions.scrollDownToBottom(700);
+        uiActions.scrollDownToBottom(400);
         uiActions.waitForElement(orderReferenceLocator, "visible");
         WebElement element = UiActions.driver.findElement(orderReferenceLocator);
         return element.getText();
+    }
+
+    public String OrderNumberCode() {
+        WebElement orderNumber = UiActions.driver.findElement(By.xpath("//tr[@class='first_item ']//a[@class='color-myaccount' and contains(.,'')]"));
+        return orderNumber.getText();
     }
 
 }

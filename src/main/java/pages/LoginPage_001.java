@@ -14,15 +14,15 @@ import utilities.UiActions;
 public class LoginPage_001 {
     UiActions uiActions = new UiActions();
 
-    String[] view = PropertiesFile.propertiesFileReader(new String[]{"emailAddressLocator", "createAccountButtonLocator", "email"});
+    String[] view = PropertiesFile.propertiesFileReader(new String[]{"emailAddressLocator", "createAccountButtonLocator"});
     By emailAddressLocator = By.id(view[0]);
     By createAccountButtonLocator = By.id(view[1]);
-    String email = view[2];
+    //String email = view[2];
 
     /**
      * Method to type email address and then click on create account button
      */
-    public void sendKeysToEmailAddressFieldAndClickOnCreateAccountButton() {
+    public void sendKeysToEmailAddressFieldAndClickOnCreateAccountButton(String email) {
         uiActions.scrollDownToBottom(700);
         uiActions.waitForElement(emailAddressLocator, "clickable")
                 .findElementAndReturn(emailAddressLocator)

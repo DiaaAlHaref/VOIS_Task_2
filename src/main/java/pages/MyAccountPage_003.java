@@ -20,6 +20,7 @@ public class MyAccountPage_003 {
      * Method to hover on Women Category and click on blouse subCategory
      */
     public void selectBlousesSectionFromWomenList() {
+        uiActions.scrollUp();
         uiActions.waitForElement(womenListLocator, "clickable")
                 .hoverOnElement(womenListLocator)
                 .findElementAndReturn(blousesSectionLocator)

@@ -1,9 +1,14 @@
 package automationTest;
 
+import fileReaders.ReadFromExcelSheet;
 import io.qameta.allure.Description;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.Assertion;
 import pages.*;
+
+import java.util.Map;
+
 /**
  * TestScenario Class Demonstrates test steps run and assertions
  */
@@ -31,19 +36,23 @@ public class TestScenarios extends BaseTest {
      * <p> Step.6) Confirm order by selecting bank wire option </p>
      * <p> Step.7) Validate order was placed from order history page </p>
      */
-    @Test
+    @Test(dataProvider = "Information")
     @Description("Test User Authentication, Select Blouse Product Then assert on the History page")
-    public void test_NewUserAccountThenProductSelectionThenAssertOnProductPlacement() {
+    public void test_NewUserAccountThenProductSelectionThenAssertOnProductPlacement(Map<Object, Object> map) {
         Log.log4PropertiesConfiguration();
         Log.runTestCase("test_NewUserAccountThenProductSelectionThenAssertOnProductPlacement");
 
         landingPage.clickOnSignInButton();
         Log.info("Clicked On SignIn Button");
 
-        loginPage_001.sendKeysToEmailAddressFieldAndClickOnCreateAccountButton();
+        loginPage_001.sendKeysToEmailAddressFieldAndClickOnCreateAccountButton(String.valueOf(map.get("email")));
         Log.info("Typed email in email-address text field");
 
-        authenticationPage_002.authenticationPersonalInformation();
+        authenticationPage_002.authenticationPersonalInformation(String.valueOf(map.get("firstName")), String.valueOf(map.get("lastName")),
+                String.valueOf(map.get("email")), String.valueOf(map.get("password")), String.valueOf(map.get("address")),
+                String.valueOf(map.get("city")), String.valueOf(map.get("postalCode")),
+                String.valueOf(map.get("mobilePhone")), String.valueOf(map.get("addressAlias")));
+
         Log.info("Filled all information for user authentication");
 
         myAccountPage_003.selectBlousesSectionFromWomenList();
@@ -70,13 +79,29 @@ public class TestScenarios extends BaseTest {
         Log.info("Viewing order history to confirm product placement");
 
         String referenceNumber = orderHistoryPage_009.validateOrderPlacementInOrderHistory();
-        System.out.println("This is the text Order: " + referenceNumber);
+        String orderNumberCode = orderHistoryPage_009.OrderNumberCode();
+
+
         Assertion assertion = new Assertion();
-        assertion.assertTrue(referenceNumber.contains("placed on 07/01/2020"));
+        assertion.assertTrue(referenceNumber.contains(orderNumberCode));
         Log.warn("Asserted true as the product is placed in history page");
 
 
         Log.endTestCase("test_NewUserAccountThenProductSelectionThenAssertOnProductPlacement");
 
+
+        System.out.println("This is the text Order: " + referenceNumber);
+        System.out.println("This is the orderNumber: " + orderNumberCode);
+    }
+
+    /**
+     * Data Provider linked with excel sheet method to return data in form of key and value
+     *
+     * @return key and value
+     */
+    @DataProvider(name = "Information")
+    public Object[][] getDataFromExcel() {
+        final Object[][] objects = ReadFromExcelSheet.returnData();
+        return objects;
     }
 }
